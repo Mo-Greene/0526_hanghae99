@@ -23,5 +23,4 @@ public class MemoService {
         memo.update(requestDto);
         return memo.getId();
     }
-
 }
