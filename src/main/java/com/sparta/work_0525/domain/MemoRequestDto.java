@@ -6,4 +6,7 @@ import lombok.Getter;
 public class MemoRequestDto {
     private String username;
     private String contents;
+
+
+    //검색필터
 }
