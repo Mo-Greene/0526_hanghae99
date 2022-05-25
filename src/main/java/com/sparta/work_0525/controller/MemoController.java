@@ -27,6 +27,15 @@ public class MemoController {
         return memoRepository.findAllByOrderByModifiedAtDesc();
     }
 
+    //비밀번호 조회 api
+    @GetMapping("/api/memos/{id}")
+    public String pwMemos(@PathVariable Long id) {
+        Memo memo = memoRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
+        );
+        return memo.getPassword();
+    }
+
     @DeleteMapping("/api/memos/{id}")
     public Long deleteMemo(@PathVariable Long id) {
         memoRepository.deleteById(id);
