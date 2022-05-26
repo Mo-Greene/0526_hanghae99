@@ -28,7 +28,7 @@ public class MemoController {
     }
 
     //비밀번호 조회 api
-    @GetMapping("/api/memos/{id}")
+    @GetMapping("/api/memos/password/{id}")
     public String pwMemos(@PathVariable Long id) {
         Memo memo = memoRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
