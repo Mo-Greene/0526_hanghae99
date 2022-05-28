@@ -1,4 +1,4 @@
-package com.sparta.work_0525.domain;
+package com.sparta.work_0525.dto;
 
 import lombok.Getter;
 

@@ -1,8 +1,8 @@
 package com.sparta.work_0525.controller;
 
-import com.sparta.work_0525.domain.Memo;
-import com.sparta.work_0525.domain.MemoRepository;
-import com.sparta.work_0525.domain.MemoRequestDto;
+import com.sparta.work_0525.model.Memo;
+import com.sparta.work_0525.repository.MemoRepository;
+import com.sparta.work_0525.dto.MemoRequestDto;
 import com.sparta.work_0525.service.MemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +33,7 @@ public class MemoController {
         Memo memo = memoRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
         );
+        // 이거 재밌네 무조건 참고!!
         return memo.getPassword();
     }
 

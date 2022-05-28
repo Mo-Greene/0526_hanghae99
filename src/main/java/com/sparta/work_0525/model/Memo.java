@@ -1,5 +1,6 @@
-package com.sparta.work_0525.domain;
+package com.sparta.work_0525.model;
 
+import com.sparta.work_0525.dto.MemoRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
